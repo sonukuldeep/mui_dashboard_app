@@ -15,25 +15,14 @@ import {
 } from "@mui/icons-material";
 
 export default function AppHeader({
-  setCollapsed,
   setToggled,
-  broken,
 }: {
-  setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
   setToggled: React.Dispatch<React.SetStateAction<boolean>>;
-  broken: boolean;
 }) {
   return (
     <AppBar position="sticky" sx={styles.appBar}>
       <Toolbar>
-        <IconButton
-          color="secondary"
-          onClick={() =>
-            broken
-              ? (setCollapsed(false), setToggled((pre) => !pre))
-              : setCollapsed((pre) => !pre)
-          }
-        >
+        <IconButton color="secondary" onClick={() => setToggled((pre) => !pre)}>
           <MenuTwoTone />
         </IconButton>
         <Box

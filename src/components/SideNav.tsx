@@ -8,14 +8,10 @@ import {
 } from "@mui/icons-material";
 
 export default function SideNav({
-  isCollapsed,
   toggled,
-  setBroken,
   setToggled,
 }: {
-  isCollapsed: boolean;
   toggled: boolean;
-  setBroken: React.Dispatch<React.SetStateAction<boolean>>;
   setToggled: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const theme = useTheme();
@@ -23,11 +19,9 @@ export default function SideNav({
   return (
     <Sidebar
       style={{ height: "100%", top: "auto" }}
-      breakPoint="md"
+      breakPoint="all"
       backgroundColor={theme.palette.customNeutral.light}
-      collapsed={isCollapsed}
       toggled={toggled}
-      onBreakPoint={setBroken}
       onBackdropClick={() => setToggled(false)}
     >
       <Box sx={styles.container}>
@@ -36,14 +30,10 @@ export default function SideNav({
           alt="avatar"
           src="https://api.dicebear.com/7.x/pixel-art/svg"
         />
-        {!isCollapsed ? (
-          <>
-            <Typography variant="body2" sx={styles.title}>
-              YouTube
-            </Typography>
-            <Typography variant="overline">React with Me</Typography>
-          </>
-        ) : null}
+        <Typography variant="body2" sx={styles.title}>
+          YouTube
+        </Typography>
+        <Typography variant="overline">React with Me</Typography>
       </Box>
       <Menu>
         <MenuItem active icon={<DashboardOutlined />}>
