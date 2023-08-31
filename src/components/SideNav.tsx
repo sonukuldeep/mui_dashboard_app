@@ -1,5 +1,6 @@
 import { Avatar, Box, SxProps, Typography, useTheme } from "@mui/material";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   AnalyticsOutlined,
   DashboardOutlined,
@@ -15,6 +16,7 @@ export default function SideNav({
   setToggled: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const theme = useTheme();
+  const location = useLocation();
 
   return (
     <Sidebar
@@ -23,6 +25,7 @@ export default function SideNav({
       backgroundColor={theme.palette.customNeutral.light}
       toggled={toggled}
       onBackdropClick={() => setToggled(false)}
+      rtl={false} //right or left
     >
       <Box sx={styles.container}>
         <Avatar
@@ -35,17 +38,43 @@ export default function SideNav({
         </Typography>
         <Typography variant="overline">React with Me</Typography>
       </Box>
-      <Menu>
-        <MenuItem active icon={<DashboardOutlined />}>
+      <Menu
+        menuItemStyles={{
+          button: ({ active }) => {
+            return {
+              backgroundColor: active
+                ? theme.palette.customNeutral.medium
+                : undefined,
+            };
+          },
+        }}
+      >
+        <MenuItem
+          component={<NavLink to="/" />}
+          active={location.pathname === "/"}
+          icon={<DashboardOutlined />}
+        >
           <Typography variant="body2">Dashboard</Typography>
         </MenuItem>
-        <MenuItem icon={<SourceOutlined />}>
+        <MenuItem
+          component={<NavLink to="/content" />}
+          active={location.pathname === "/content"}
+          icon={<SourceOutlined />}
+        >
           <Typography variant="body2">Content</Typography>
         </MenuItem>
-        <MenuItem icon={<AnalyticsOutlined />}>
-          <Typography variant="body2">Analysis</Typography>
+        <MenuItem
+          component={<NavLink to="/analytics" />}
+          active={location.pathname === "/analytics"}
+          icon={<AnalyticsOutlined />}
+        >
+          <Typography variant="body2">Analytics</Typography>
         </MenuItem>
-        <MenuItem icon={<StyleOutlined />}>
+        <MenuItem
+          component={<NavLink to="/customization" />}
+          active={location.pathname === "/customization"}
+          icon={<StyleOutlined />}
+        >
           <Typography variant="body2">Customization</Typography>
         </MenuItem>
       </Menu>
