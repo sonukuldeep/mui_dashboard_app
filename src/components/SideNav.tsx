@@ -21,7 +21,6 @@ export default function SideNav({
 }) {
   const theme = useTheme();
   const location = useLocation();
-  
   return (
     <Sidebar
       style={{ height: "100%", top: "auto" }}
