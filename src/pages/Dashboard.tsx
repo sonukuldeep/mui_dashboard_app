@@ -46,7 +46,7 @@ function Dashboard() {
             </Typography>
           </CardContent>
         </Card>
-        <Card sx={styles.items}>
+        <Card sx={styles.item}>
           <CardContent>
             <Typography variant="cardTitle">Channel analytics</Typography>
             <Typography variant="h7">Current Subscription</Typography>
@@ -101,6 +101,140 @@ function Dashboard() {
             <Typography sx={styles.cardAction} variant="link">
               GO TO VIDEO ANALYTICS
             </Typography>
+          </CardContent>
+        </Card>
+
+        <Card sx={styles.item}>
+          <CardContent>
+            <Typography variant="cardTitle">Latest comments</Typography>
+            <ColorText color="customNeutral.normal">
+              <Typography variant="h7">
+                Channel comments I haven't responded to
+              </Typography>
+            </ColorText>
+            <Box sx={styles.commentRow}>
+              <Avatar
+                sx={styles.avatar}
+                alt="user"
+                src="https://api.dicebear.com/7.x/pixel-art/svg"
+              ></Avatar>
+              <Box>
+                <Box sx={styles.commentDetailsSection}>
+                  <Typography sx={styles.postMeta}>React with Me</Typography>
+                  <Typography sx={styles.postMeta}>2 weeks ago</Typography>
+                </Box>
+                <Typography sx={styles.commentText}>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta laboriosam unde commodi porro velit temporibus
+                  doloremque quasi tempore nulla expedita.
+                </Typography>
+              </Box>
+              <Box
+                component={"img"}
+                sx={styles.videoThumbnail}
+                src="https://img.youtube.com/vi/cd3P3yXyx30/sddefault.jpg"
+              />
+            </Box>
+            <Divider sx={styles.divider} />
+            <Box sx={styles.commentRow}>
+              <Avatar
+                sx={styles.avatar}
+                alt="user"
+                src="https://api.dicebear.com/7.x/pixel-art/svg"
+              ></Avatar>
+              <Box>
+                <Box sx={styles.commentDetailsSection}>
+                  <Typography sx={styles.postMeta}>React with Me</Typography>
+                  <Typography sx={styles.postMeta}>3 weeks ago</Typography>
+                </Box>
+                <Typography sx={styles.commentText}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                  doloremque libero a veritatis suscipit illo iste reprehenderit
+                  hic expedita quaerat.
+                </Typography>
+              </Box>
+              <Box
+                component={"img"}
+                sx={styles.videoThumbnail}
+                src="https://img.youtube.com/vi/cd3P3yXyx30/sddefault.jpg"
+              />
+            </Box>
+            <Divider sx={styles.divider} />
+            <Box sx={styles.commentRow}>
+              <Avatar
+                sx={styles.avatar}
+                alt="user"
+                src="https://api.dicebear.com/7.x/pixel-art/svg"
+              ></Avatar>
+              <Box>
+                <Box sx={styles.commentDetailsSection}>
+                  <Typography sx={styles.postMeta}>React with Me</Typography>
+                  <Typography sx={styles.postMeta}>4 weeks ago</Typography>
+                </Box>
+                <Typography sx={styles.commentText}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora nobis veniam molestiae suscipit fuga fugit delectus
+                  quidem explicabo, amet exercitationem.
+                </Typography>
+              </Box>
+              <Box
+                component={"img"}
+                sx={styles.videoThumbnail}
+                src="https://img.youtube.com/vi/cd3P3yXyx30/sddefault.jpg"
+              />
+            </Box>
+            <Typography sx={styles.cardAction} variant="link">
+              VIEW MORE
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <Card sx={styles.item}>
+          <CardContent sx={styles.ideaContent}>
+            <Box>
+              <Typography variant="cardTitle">Ideas for you</Typography>
+              <Typography sx={styles.ideaQuestion}>
+                Ready to get into defi?
+              </Typography>
+              <Typography variant="h7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati voluptatibus nemo ea, perspiciatis aliquam commodi.
+                Pariatur veritatis aliquid itaque! Reiciendis.
+              </Typography>
+              <Typography sx={styles.cardActions} variant="link">
+                GET STARTED NOW
+              </Typography>
+            </Box>
+            <Box
+              component={"img"}
+              src="https://t3.ftcdn.net/jpg/02/55/22/68/360_F_255226859_Rhqr5hflr2esVXHQE1sS1bWxmZxs0gWI.jpg"
+              sx={styles.ideaImage}
+            ></Box>
+          </CardContent>
+        </Card>
+
+        <Card sx={styles.item}>
+          <CardContent sx={styles.ideaContent}>
+            <Box>
+              <Typography variant="cardTitle">Creator insider</Typography>
+              <Box
+                component={"img"}
+                sx={styles.insiderImage}
+                src="https://img.freepik.com/premium-vector/top-secret-stamp-with-grunge-effect-media-documents_605959-340.jpg"
+              ></Box>
+              <Typography sx={styles.ideaQuestion}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse,
+                harum.
+              </Typography>
+              <Typography variant="h7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                eius error unde nisi corporis officia, veniam quos obcaecati ut?
+                Maxime.
+              </Typography>
+              <Typography sx={styles.cardActions} variant="link">
+                WATCH ON YOUTUBE
+              </Typography>
+            </Box>
           </CardContent>
         </Card>
       </Box>
