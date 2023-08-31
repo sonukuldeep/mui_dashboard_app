@@ -1,14 +1,15 @@
 import { Box, CssBaseline, SxProps, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
-import { AppHeader, SideNav } from "./components";
 import { useState } from "react";
-import theme from "./config/theme";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
+import { AppHeader, SideNav } from "./components";
 import { Analytics, Content, Customization, Dashboard } from "./pages";
+import theme from "./config/theme";
+
 function App() {
   const [isCollapsed, setCollapsed] = useState(false);
   const [toggled, setToggled] = useState(false);
@@ -16,6 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+
       <AppHeader
         setCollapsed={setCollapsed}
         setToggled={setToggled}
