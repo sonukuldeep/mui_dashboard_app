@@ -1,4 +1,5 @@
 import { Box, CssBaseline, SxProps, ThemeProvider } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
 import { AppHeader, SideNav } from "./components";
 import { useState } from "react";
 import theme from "./config/theme";
@@ -7,6 +8,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 function App() {
   const [isCollapsed, setCollapsed] = useState(false);
   const [toggled, setToggled] = useState(false);
@@ -27,7 +29,12 @@ function App() {
           toggled={toggled}
         />
         <Box component={"main"} sx={styles.mainSection}>
-          <h1>Hello world</h1>
+            <Routes>
+            <Route path="/" element={<Dashboard />}></Route>
+            <Route path="/content" element={<Content />}></Route>
+            <Route path="/analytics" element={<Analytics />}></Route>
+            <Route path="/customization" element={<Customization />}></Route>
+          </Routes>
         </Box>
       </Box>
     </ThemeProvider>
