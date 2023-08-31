@@ -8,7 +8,7 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import { AppHeader, SideNav } from "./components";
 import { Analytics, Content, Customization, Dashboard } from "./pages";
-import theme from "./config/theme";
+import theme from "./lib/theme";
 
 function App() {
   const [isCollapsed, setCollapsed] = useState(false);
