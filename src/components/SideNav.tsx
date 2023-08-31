@@ -1,12 +1,12 @@
 import { Avatar, Box, SxProps, Typography, useTheme } from "@mui/material";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   AnalyticsOutlined,
   DashboardOutlined,
   SourceOutlined,
   StyleOutlined,
 } from "@mui/icons-material";
-import { NavLink, useLocation } from "react-router-dom";
 
 export default function SideNav({
   isCollapsed,
