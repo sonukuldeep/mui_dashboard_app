@@ -30,6 +30,7 @@ export default function SideNav({
       toggled={toggled}
       onBreakPoint={setBroken}
       onBackdropClick={() => setToggled(false)}
+      rtl={false} // postion to right or left
     >
       <Box sx={styles.container}>
         <Avatar
